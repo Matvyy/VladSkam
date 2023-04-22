@@ -1,0 +1,26 @@
+.header{
+    background-color: aquamarine;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.name{
+    margin: 10px;
+    padding-top: 12px;
+
+}
+
+@media screen and (max-width: 631px) {
+    .header{
+        margin: auto;
+    }
+  }
+
+
+@media screen and (max-width: 500px) {
+  .header{
+    width: 100%;
+    margin: auto;
+  }
+}
+  

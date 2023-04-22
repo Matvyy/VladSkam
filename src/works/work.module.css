@@ -1,0 +1,17 @@
+.name{
+    font-size: 300%;
+}
+
+@media screen and (max-width: 400px) {
+    .name{
+        font-size: 200%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .name{
+        font-size: 250%;
+    }
+  }
+
+  

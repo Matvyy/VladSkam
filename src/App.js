@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styles from './App.module.css'
+import Header from './header/header';
+import Windows from './workwindow/windows';
+import Contact from './contact/contact';
+import Office from './works/office/office';
+import Welder from './works/welder/welder';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className={styles.app}>
+      <div className={styles.header}><Header/></div> 
+      <div className={styles.windows}>
+
+      <Routes>
+        <Route path='/' element={<Windows/>}/>
+        <Route path='/office' element={<Office/>}/>
+        <Route path='/welder' element={<Welder/>}/>
+      </Routes>
+        
+      </div>
+
     </div>
+    <br/>
+    <hr className={styles.hr}/>
+    <div className={styles.app}>
+    <Contact/>
+    </div>
+    
+    </BrowserRouter>
   );
 }
 
